@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>封开杨池古村-岭南第一古村的历史文化与旅游指南</title>
+    <meta name="description" content="封开杨池古村，被誉为“岭南第一古村”，详细介绍其明清建筑风格、古井、古树及历史典故。提供旅游攻略、交通指南、最佳游览时间及特色美食推荐。">
+    <meta name="keywords" content="封开杨池古村, 岭南第一古村, 广东旅游景点, 封开旅游, 古村落, 杨池古村攻略">
+    <style>
+        :root {
+            --primary-color: #5d4037;
+            --secondary-color: #8d6e63;
+            --accent-color: #d7ccc8;
+            --bg-color: #f5f5f5;
+            --text-color: #333;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/oldvillage/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Intro Section */
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .intro h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #666;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Feature Cards */
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            height: 200px;
+            width: 100%;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .card-text {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        /* Highlight Section */
+        .highlight-section {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            box-shadow: var(--shadow);
+        }
+
+        .highlight-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .highlight-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .highlight-image img {
+            border-radius: var(--radius);
+        }
+
+        /* Attractions List */
+        .attractions-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .attraction-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border-left: 5px solid var(--secondary-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .attraction-item h3 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: #e8f5e9;
+            padding: 3rem;
+            border-radius: var(--radius);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .guide-item {
+            text-align: center;
+        }
+
+        .guide-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2e7d32;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 3rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .highlight-section {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">🏯 封开杨池古村</div>
+        <nav>
+            <ul>
+                <li><a href="#intro">概况</a></li>
+                <li><a href="#attractions">景点</a></li>
+                <li><a href="#history">历史</a></li>
+                <li><a href="#guide">攻略</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>岭南第一古村</h1>
+        <p>探访封开杨池古村，感受明清时期的宗族文化与岭南建筑艺术的完美融合。</p>
+        <a href="#guide" class="btn">开始游览</a>
+    </div>
+</section>
+
+<main class="container">
+    <!-- Introduction -->
+    <section id="intro" class="intro">
+        <h2>关于杨池古村</h2>
+        <p>封开杨池古村位于广东省肇庆市封开县罗活镇，始建于明朝隆庆年间，距今已有四百多年历史。因其保存完好的明清建筑群、独特的风水布局和深厚的历史底蕴，被专家誉为“岭南第一古村”。这里依山傍水，古木参天，是体验岭南古村落风貌、感受宗族文化的绝佳去处。</p>
+    </section>
+
+    <!-- Key Highlights -->
+    <section class="grid-3">
+        <article class="card">
+            <img src="https://picsum.photos/seed/arch/400/300" alt="古建筑" class="card-img">
+            <div class="card-body">
+                <h3 class="card-title">明清建筑群</h3>
+                <p class="card-text">村内保留了大量明清时期的青砖瓦房，建筑风格古朴典雅，具有极高的历史研究价值。</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="https://picsum.photos/seed/nature/400/300" alt="古树" class="card-img">
+            <div class="card-body">
+                <h3 class="card-title">古树参天</h3>
+                <p class="card-text">村内古木葱郁，百年古榕树遮天蔽日，为古村增添了一份生机与静谧。</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="https://picsum.photos/seed/food/400/300" alt="特色美食" class="card-img">
+            <div class="card-body">
+                <h3 class="card-title">地道风味</h3>
+                <p class="card-text">品尝封开特色的杏花鸡、河鲜及各类传统客家美食，感受舌尖上的岭南。</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- History & Culture -->
+    <section id="history" class="highlight-section">
+        <div class="highlight-text">
+            <h2 style="color: var(--primary-color); margin-bottom: 1rem;">历史渊源</h2>
+            <p>杨池古村的始祖叶宗满，原籍为广西平南。明隆庆年间，他辞官归隐，带着家人来到封开罗活，见此地山环水抱，风水极佳，遂定居于此。叶氏家族在数百年间繁衍生息，修建了这处规模宏大的村落。村内现存古建筑数十座，包括祠堂、书室、民居等，见证了叶氏家族的兴衰荣辱。</p>
+            <p>古村不仅建筑精美，还流传着许多叶氏先祖勤耕苦读、修身齐家的故事，是岭南儒家文化的缩影。</p>
+        </div>
+        <div class="highlight-image">
+            <img src="https://picsum.photos/seed/history/600/400" alt="历史建筑细节">
+        </div>
+    </section>
+
+    <!-- Attractions -->
+    <section id="attractions">
+        <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">必游景点</h2>
+        <div class="attractions-list">
+            <div class="attraction-item">
+                <h3>📜 叶氏宗祠</h3>
+                <p>古村的灵魂所在，供奉着叶氏列祖列宗。宗祠建筑气势恢宏，砖雕、木雕工艺精湛，是了解宗族文化的重要窗口。</p>
+            </div>
+            <div class="attraction-item">
+                <h3>🌳 瑶池古井</h3>
+                <p>村中有一口古井名为“瑶池”，水质清冽甘甜，长年不枯，相传是先祖留下的宝物，至今仍是村民日常取水之处。</p>
+            </div>
+            <div class="attraction-item">
+                <h3>🏡 荷塘月色</h3>
+                <p>村后有一片荷塘，夏季荷花盛开时，翠绿的荷叶与粉红的花朵相映成趣，是古村最美的风景线之一。</p>
+            </div>
+            <div class="attraction-item">
+                <h3>🏮 古村巷道</h3>
+                <p>漫步在青石板铺就的巷道中，两旁是斑驳的青砖墙，偶尔能看到门楣上残留的精美石刻，仿佛穿越回明清时代。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Guide -->
+    <section id="guide" class="guide-section">
+        <h2 style="text-align: center; color: #2e7d32; margin-bottom: 2rem;">旅游攻略</h2>
+        <div class="guide-grid">
+            <div class="guide-item">
+                <div class="guide-icon">📍</div>
+                <h3>地理位置</h3>
+                <p>广东省肇庆市封开县罗活镇，距离县城约30公里。</p>
+            </div>
+            <div class="guide-item">
+                <div class="guide-icon">🚗</div>
+                <h3>交通指南</h3>
+                <p>自驾：导航至“封开杨池古村”。公共交通可先到封开县城，再转乘当地巴士前往。</p>
+            </div>
+            <div class="guide-item">
+                <div class="guide-icon">⏰</div>
+                <h3>开放时间</h3>
+                <p>全天开放（建议游览时间为1-2小时）。最佳游览时间为春秋两季。</p>
+            </div>
+            <div class="guide-item">
+                <div class="guide-icon">🎫</div>
+                <h3>门票信息</h3>
+                <p>通常为免门票政策，部分特殊展览或项目可能收费，建议提前咨询。</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>封开杨池古村</h4>
+            <p>致力于推广岭南古村落文化，为游客提供最真实的旅游资讯。</p>
+        </div>
+        <div class="footer-col">
+            <h4>快速链接</h4>
+            <ul>
+                <li><a href="#intro">村庄概况</a></li>
+                <li><a href="#history">历史典故</a></li>
+                <li><a href="#attractions">景点介绍</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>联系方式</h4>
+            <ul>
+                <li>地址：广东省肇庆市封开县罗活镇</li>
+                <li>电话：0758-XXXXXXX</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 封开杨池古村旅游资讯网. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
