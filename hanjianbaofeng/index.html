@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>罕见暴风雪袭击新疆阿勒泰-极端天气实时监测与应急响应</title>
+    <meta name="description" content="本页面提供关于罕见暴风雪袭击新疆阿勒泰的最新气象资讯、灾害预警信息、交通路况及应急响应措施。详细解析此次极端天气的形成原因、历史对比及防范指南。">
+    <meta name="keywords" content="罕见暴风雪袭击新疆阿勒泰, 新疆暴雪, 阿勒泰天气, 极端天气, 交通管制, 应急响应">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #003366;
+            --accent-color: #d9534f;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f9f9f9;
+            --bg-white: #ffffff;
+            --border-color: #e1e4e8;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border-color);
+            margin-left: 1rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .weather-widget {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            background: #eef5f9;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .weather-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://picsum.photos/seed/snow/1600/900') no-repeat center center/cover;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .alert-box {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Status Grid */
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: -3rem;
+            margin-bottom: 3rem;
+        }
+
+        .status-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .status-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .status-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Content Layout */
+        .content-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* News List */
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .news-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .news-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .news-date {
+            background: #f0f4f8;
+            padding: 0.5rem;
+            border-radius: 4px;
+            text-align: center;
+            min-width: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .news-date .day {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .news-date .month {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .news-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            background: #e6f7ff;
+            color: #1890ff;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        .news-tag.urgent {
+            background: #fff1f0;
+            color: #f5222d;
+        }
+
+        /* Sidebar */
+        aside {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .sidebar-widget {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .traffic-list {
+            list-style: none;
+        }
+
+        .traffic-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px dashed #ddd;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .traffic-list li:last-child {
+            border-bottom: none;
+        }
+
+        .traffic-status.off {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .traffic-status.on {
+            color: #52c41a;
+        }
+
+        /* Analysis Section */
+        .analysis-section {
+            background: var(--bg-light);
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .analysis-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .analysis-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .analysis-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .analysis-card ul {
+            padding-left: 1.2rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .analysis-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 3rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .news-item {
+                flex-direction: column;
+            }
+
+            .news-date {
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .news-date .day {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>❄️</span> 极端天气视界
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">实时监测</a></li>
+                    <li><a href="#">科普解读</a></li>
+                    <li><a href="#">应急指南</a></li>
+                </ul>
+            </nav>
+            <div class="weather-widget">
+                <span class="weather-icon">🌨️</span>
+                <span>阿勒泰地区: 暴雪橙色预警</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <span class="alert-box">紧急气象预警</span>
+                <h1>罕见暴风雪袭击新疆阿勒泰</h1>
+                <p>受强冷空气与暖湿气流共同影响，阿勒泰地区遭遇历史同期罕见的特大暴风雪天气，导致多条国道、省道及铁路运输中断，部分景区紧急关闭。</p>
+            </div>
+        </section>
+
+        <!-- Status Dashboard -->
+        <div class="container">
+            <div class="status-grid">
+                <div class="status-card">
+                    <span class="status-value">-42°C</span>
+                    <span class="status-label">最低气温 (富蕴县)</span>
+                </div>
+                <div class="status-card">
+                    <span class="status-value">12h+</span>
+                    <span class="status-label">降雪持续时间</span>
+                </div>
+                <div class="status-card">
+                    <span class="status-value">80+</span>
+                    <span class="status-label">受影响车辆 (已救援)</span>
+                </div>
+                <div class="status-card">
+                    <span class="status-value">2级</span>
+                    <span class="status-label">风力等级</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container content-layout">
+            <!-- Left Column: News Feed -->
+            <section class="news-feed">
+                <h2 class="section-title">最新灾情动态</h2>
+                <div class="news-list">
+                    <article class="news-item">
+                        <div class="news-date">
+                            <span class="day">26</span>
+                            <span class="month">11月</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag urgent">紧急</span>
+                            <h3>阿勒泰地区启动气象灾害Ⅰ级应急响应</h3>
+                            <p>据气象部门监测，此次暴风雪具有“范围广、强度大、持续时间长”的特点。阿勒泰地区应急管理局已启动Ⅰ级应急响应，全力开展除雪保通工作。</p>
+                            <a href="#">阅读详情 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="news-item">
+                        <div class="news-date">
+                            <span class="day">25</span>
+                            <span class="month">11月</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">交通</span>
+                            <h3>G216、G217等主要干线道路实施临时交通管制</h3>
+                            <p>由于路面积雪结冰严重，且伴有风吹雪，能见度极低，阿勒泰交警支队对G216线富蕴至可可托海段、G217线阿勒泰至克拉玛依段实施临时交通管制。</p>
+                            <a href="#">查看路况 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="news-item">
+                        <div class="news-date">
+                            <span class="day">25</span>
+                            <span class="month">11月</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">旅游</span>
+                            <h3>喀纳斯、禾木等景区发布关闭公告</h3>
+                            <p>受暴风雪影响，喀纳斯景区、禾木景区、可可托海景区自25日起暂时关闭，暂停所有游客接待工作，具体开放时间待气象条件好转后另行通知。</p>
+                            <a href="#">了解详情 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="news-item">
+                        <div class="news-date">
+                            <span class="day">24</span>
+                            <span class="month">11月</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">电力</span>
+                            <h3>电力部门紧急抢修受损线路</h3>
+                            <p>暴风雪导致部分山区输电线路覆冰跳闸，国网阿勒泰供电公司组织抢修队伍，在确保安全的前提下，对受损线路进行紧急除冰和抢修。</p>
+                            <a href="#">阅读详情 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Right Column: Sidebar -->
+            <aside>
+                <div class="sidebar-widget">
+                    <h4 class="sidebar-title">实时路况查询</h4>
+                    <ul class="traffic-list">
+                        <li>
+                            <span>G216线 (富蕴-可可托海)</span>
+                            <span class="traffic-status off">全线封闭</span>
+                        </li>
+                        <li>
+                            <span>G217线 (阿勒泰-克拉玛依)</span>
+                            <span class="traffic-status off">封闭</span>
+                        </li>
+                        <li>
+                            <span>S21阿乌高速</span>
+                            <span class="traffic-status on">通行正常</span>
+                        </li>
+                        <li>
+                            <span>阿勒泰机场</span>
+                            <span class="traffic-status off">航班取消</span>
+                        </li>
+                        <li>
+                            <span>喀纳斯机场</span>
+                            <span class="traffic-status off">关闭</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4 class="sidebar-title">防灾避险指南</h4>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">
+                        面对极端暴风雪天气，请务必保持冷静，减少外出。
+                    </p>
+                    <ul style="font-size: 0.9rem; color: #666; list-style-type: disc; padding-left: 1.2rem;">
+                        <li>切勿在广告牌、临时搭建物下逗留</li>
+                        <li>驾车出行应安装防滑链，保持车距</li>
+                        <li>家中储备足量的食物、水和保暖物资</li>
+                        <li>如遇车辆被困，应留在车内等待救援</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Scientific Analysis Section -->
+        <section class="analysis-section">
+            <div class="container">
+                <h2 class="section-title">专家解读：为何此次暴雪如此罕见？</h2>
+                <div class="analysis-grid">
+                    <div class="analysis-card">
+                        <h3>❄️ 影响机制分析</h3>
+                        <p>此次罕见暴风雪是典型的“冷暖空气剧烈交汇”产物。西伯利亚强冷空气迅速南下，与新疆上空活跃的暖湿气流在阿勒泰地区上空结合，形成了强烈的上升运动，导致降雪量远超历史同期平均值。</p>
+                        <ul>
+                            <li>强冷空气南下速度极快</li>
+                            <li>暖湿气流充沛且持续时间长</li>
+                            <li>地形抬升作用加剧降雪</li>
+                        </ul>
+                    </div>
+                    <div class="analysis-card">
+                        <h3>🏔️ 地形因素</h3>
+                        <p>阿勒泰地区位于阿尔泰山脉腹地，地形复杂。高山迎风坡抬升作用明显，使得水汽凝结成雪，且风力受地形峡谷效应影响，极易形成“雪墙”和强风雪天气。</p>
+                        <ul>
+                            <li>阿尔泰山脉阻挡气流</li>
+                            <li>河谷地带风速加大</li>
+                            <li>山区垂直气候差异显著</li>
+                        </ul>
+                    </div>
+                    <div class="analysis-card">
+                        <h3>⚠️ 历史对比</h3>
+                        <p>根据气象历史数据，阿勒泰地区11月下旬出现如此大范围的特大暴雪较为少见。通常该时段以阴雨或小雪为主。此次极端天气打破了多项历史极值记录。</p>
+                        <ul>
+                            <li>积雪深度突破历史极值</li>
+                            <li>能见度极低，形成“白化”现象</li>
+                            <li>对畜牧业和基础设施造成巨大冲击</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 0.85rem; line-height: 1.6;">
+                        本平台致力于为公众提供及时、准确的气象灾害预警与科普信息，协助社会各界做好防灾减灾工作。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">国家气象中心</a></li>
+                        <li><a href="#">新疆维吾尔自治区应急厅</a></li>
+                        <li><a href="#">中国天气网</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>24小时应急值班电话：12122</li>
+                        <li>气象服务热线：96121</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 极端天气视界 | 数据来源：新疆维吾尔自治区气象局 | 免责声明：本页面信息仅供参考，具体以官方发布为准。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
