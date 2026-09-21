@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CS1.6死亡奔跑IP查询与服务器推荐平台，提供最新CS1.6死亡奔跑服务器列表、延迟测试、地图下载及游戏技巧分享。">
+    <meta name="keywords" content="cs1.6死亡奔跑ip, cs1.6死亡奔跑服务器, cs1.6死跑ip查询, cs1.6竞技平台, 反恐精英1.6">
+    <title>cs1.6死亡奔跑ip - 最新服务器列表与连接指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #00ffcc;
+            --secondary-color: #0088ff;
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+            --hover-bg: #21262d;
+            --font-stack: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-main);
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Utility */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(13, 17, 23, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .btn-connect {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: #000;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .btn-connect:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 80px 0;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(0, 136, 255, 0.15) 0%, var(--bg-dark) 70%);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .search-box {
+            position: relative;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--secondary-color);
+        }
+
+        /* Server List */
+        .server-list {
+            padding: 60px 0;
+        }
+
+        .server-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .server-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .server-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary-color);
+        }
+
+        .server-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+        }
+
+        .server-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .server-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .server-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+        }
+
+        .tag.vip { background: rgba(255, 215, 0, 0.2); color: #ffd700; }
+        .tag.new { background: rgba(0, 255, 136, 0.2); color: var(--primary-color); }
+
+        .server-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .info-item svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--text-muted);
+        }
+
+        .btn-copy {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+
+        .btn-copy:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: #0d1117;
+            padding: 60px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .guide-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .guide-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .guide-text p {
+            margin-bottom: 15px;
+            color: var(--text-muted);
+        }
+
+        .steps {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .steps li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .steps li::before {
+            content: counter(step);
+            counter-increment: step;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: var(--secondary-color);
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .guide-image {
+            background: var(--bg-card);
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .guide-image img {
+            width: 100%;
+            border-radius: 4px;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0d1117;
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .guide-content { grid-template-columns: 1fr; }
+            nav ul { display: none; } /* Simplified mobile nav for this demo */
+            .header-inner { padding: 0 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary-color)">
+                <path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"/>
+            </svg>
+            <span>CS1.6</span>死跑网
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#servers">服务器列表</a></li>
+                <li><a href="#guide">连接指南</a></li>
+                <li><a href="#download">地图下载</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn-connect">快速连接</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1>cs1.6死亡奔跑ip</h1>
+            <p>汇聚全网最新、最稳定的CS1.6死亡奔跑服务器。寻找你的战场，测试延迟，一键复制IP连接。</p>
+            <div class="search-box">
+                <input type="text" placeholder="搜索服务器名称、地图或地区..." aria-label="搜索服务器">
+            </div>
+        </div>
+    </section>
+
+    <section id="servers" class="server-list">
+        <div class="container">
+            <div class="section-title">
+                <span>热门服务器推荐</span>
+                <small style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">实时在线人数</small>
+            </div>
+            
+            <div class="server-grid">
+                <!-- Server Card 1 -->
+                <article class="server-card">
+                    <div class="server-header">
+                        <div class="server-name">华北-极速竞技场</div>
+                        <div class="server-tags">
+                            <span class="tag new">最新</span>
+                            <span class="tag">VIP</span>
+                        </div>
+                    </div>
+                    <div class="server-info">
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            <span>延迟: 15ms</span>
+                        </div>
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                            <span>地图: 死跑1.0</span>
+                        </div>
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
+                            <span>人数: 24/32</span>
+                        </div>
+                    </div>
+                    <button class="btn-copy" onclick="copyIP('192.168.1.100:27015')">192.168.1.100:27015</button>
+                </article>
+
+                <!-- Server Card 2 -->
+                <article class="server-card">
+                    <div class="server-header">
+                        <div class="server-name">华东-幻影战队</div>
+                        <div class="server-tags">
+                            <span class="tag">稳定</span>
+                            <span class="tag">满员</span>
+                        </div>
+                    </div>
+                    <div class="server-info">
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            <span>延迟: 45ms</span>
+                        </div>
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                            <span>地图: 死跑2.0</span>
+                        </div>
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
+                            <span>人数: 31/32</span>
+                        </div>
+                    </div>
+                    <button class="btn-copy" onclick="copyIP('59.110.22.33:27015')">59.110.22.33:27015</button>
+                </article>
+
+                <!-- Server Card 3 -->
+                <article class="server-card">
+                    <div class="server-header">
+                        <div class="server-name">华南-娱乐休闲</div>
+                        <div class="server-tags">
+                            <span class="tag">娱乐</span>
+                        </div>
+                    </div>
+                    <div class="server-info">
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            <span>延迟: 85ms</span>
+                        </div>
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                            <span>地图: 死跑3.0</span>
+                        </div>
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
+                            <span>人数: 18/32</span>
+                        </div>
+                    </div>
+                    <button class="btn-copy" onclick="copyIP('124.23.55.99:27015')">124.23.55.99:27015</button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="guide" class="guide-section">
+        <div class="container">
+            <div class="guide-content">
+                <div class="guide-text">
+                    <h2>如何连接 cs1.6死亡奔跑 服务器？</h2>
+                    <p>CS1.6死亡奔跑（Deathrun）是一种基于反恐精英1.6引擎的竞技模式。玩家需要在机关陷阱中通过奔跑躲避，而“跑者”则需利用机关将“死跑者”推入死亡区域。</p>
+                    <ul class="steps">
+                        <li>下载并安装 Counter-Strike 1.6 客户端。</li>
+                        <li>启动游戏，在主菜单选择“连接到服务器”。</li>
+                        <li>输入服务器IP地址（格式为 IP:端口，例如 192.168.1.100:27015）。</li>
+                        <li>点击连接，等待加入房间。</li>
+                    </ul>
+                </div>
+                <div class="guide-image">
+                    <!-- Using a generic tech/gaming placeholder -->
+                    <img src="https://picsum.photos/seed/csgo/600/350" alt="CS1.6游戏界面示意图" loading="lazy">
+                    <div style="margin-top:15px; font-size:0.85rem; color:var(--text-muted);">
+                        <p>提示：部分服务器需要安装特定的地图包才能正常游玩。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 CS1.6死亡奔跑IP查询平台. 保留所有权利。</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">
+            本站仅提供服务器IP列表与连接指引，游戏版权归Valve Corporation所有。
+        </p>
+    </div>
+</footer>
+
+<script>
+    function copyIP(ip) {
+        // 使用 Clipboard API
+        navigator.clipboard.writeText(ip).then(function() {
+            // 创建一个临时的提示框
+            const toast = document.createElement('div');
+            toast.textContent = 'IP地址已复制: ' + ip;
+            toast.style.position = 'fixed';
+            toast.style.bottom = '20px';
+            toast.style.left = '50%';
+            toast.style.transform = 'translateX(-50%)';
+            toast.style.backgroundColor = 'var(--primary-color)';
+            toast.style.color = '#000';
+            toast.style.padding = '10px 20px';
+            toast.style.borderRadius = '4px';
+            toast.style.zIndex = '2000';
+            toast.style.fontWeight = 'bold';
+            toast.style.boxShadow = '0 4px 12px rgba(0,0,0,0.5)';
+            
+            document.body.appendChild(toast);
+            
+            // 2秒后移除
+            setTimeout(() => {
+                toast.remove();
+            }, 2000);
+        }, function(err) {
+            console.error('无法复制文本: ', err);
+        });
+    }
+</script>
+
+</body>
+</html>
