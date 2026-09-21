@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梁思成故居-中国现代建筑史迹与文化遗产保护指南</title>
+    <meta name="description" content="梁思成故居专题页。详细介绍梁思成先生生平、梁林故居（北总布胡同24号）的历史沿革、建筑特色与文物保护现状。提供参观指南、历史影像资料及中国近代建筑史相关阅读推荐。">
+    <meta name="keywords" content="梁思成, 梁思成故居, 北总布胡同24号, 中国建筑史, 梁林故居, 建筑文物保护, 中国营造学社">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513; /* SaddleBrown */
+            --secondary-color: #D2B48C; /* Tan */
+            --bg-color: #F9F7F2; /* Off-white paper texture */
+            --text-color: #333333;
+            --text-light: #666666;
+            --accent-color: #C0392B; /* Deep red for emphasis */
+            --card-bg: #FFFFFF;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .btn-visit {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .btn-visit:hover {
+            background-color: #6d360f;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 550px;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/architecture_heritage/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        /* Biography Section */
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .bio-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .bio-card h3 {
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .bio-card ul {
+            list-style: none;
+        }
+
+        .bio-card li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .bio-card li::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .bio-text p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            aspect-ratio: 4/3;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        /* Visit Info Section */
+        .visit-info {
+            background-color: var(--card-bg);
+        }
+
+        .info-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .info-column {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .info-column h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .info-list li strong {
+            min-width: 80px;
+            color: var(--text-color);
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #eee;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            margin-top: 20px;
+            background-image: url('https://picsum.photos/seed/map_placeholder/600/400.jpg?blur=2');
+            background-size: cover;
+            position: relative;
+        }
+        
+        .map-placeholder::before {
+            content: '地图区域';
+            background: rgba(255,255,255,0.8);
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: var(--secondary-color);
+        }
+
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+            width: 100%;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 55%;
+        }
+
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20px;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--secondary-color);
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+
+            .bio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 50px);
+                margin-left: 50px !important;
+                text-align: left !important;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <span>🏛️</span> 梁思成故居
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#biography">生平简介</a></li>
+                    <li><a href="#heritage">历史沿革</a></li>
+                    <li><a href="#visit">参观指南</a></li>
+                </ul>
+            </nav>
+            <a href="#visit" class="btn-visit">参观预约</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <h1>梁思成故居</h1>
+                <p>探寻中国现代建筑教育的奠基人，感受营造学社的学术精神与历史回响。</p>
+                <a href="#heritage" class="btn-visit" style="padding: 12px 30px; font-size: 1.1rem;">探索历史</a>
+            </div>
+        </section>
+
+        <!-- Biography Section -->
+        <section id="biography" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>生平与贡献</h2>
+                    <p>中国近代建筑学的开拓者，中国古代建筑研究的集大成者。</p>
+                </div>
+                <div class="bio-grid">
+                    <div class="bio-card">
+                        <h3>人物名片</h3>
+                        <ul>
+                            <li><strong>姓名：</strong>梁思成</li>
+                            <li><strong>生卒：</strong>1901-1972</li>
+                            <li><strong>籍贯：</strong>广东新会</li>
+                            <li><strong>身份：</strong>建筑学家、教育家</li>
+                            <li><strong>代表作：</strong>《中国建筑史》</li>
+                        </ul>
+                    </div>
+                    <div class="bio-text">
+                        <p>梁思成（1901—1972），中国著名建筑学家、建筑教育家和城市规划师。他毕生致力于中国古代建筑的研究和保护，是中国近代建筑学的奠基人之一。作为“中国营造学社”的骨干，他与妻子林徽因共同走遍中国十五省，测绘、拍摄了两千多处古建筑，抢救了大量珍贵的建筑遗产。</p>
+                        <p>在抗日战争期间，梁思成完成了《中国建筑史》的写作，并编制了《中国建筑图集》。他的学术成果不仅为中国建筑史确立了科学的体系，更为后来中国城市规划、文物保护及古建筑修缮工作提供了重要的理论依据和实践指导。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Heritage Location Section -->
+        <section id="heritage" class="section" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>历史沿革与现状</h2>
+                    <p>北总布胡同24号：梁思成与林徽因最后的北平居所。</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">1932年 - 1937年</span>
+                            <h3>营造学社时期</h3>
+                            <p>梁思成与林徽因在此居住，组织营造学社进行野外测绘。这里是他们发现唐代建筑佛光寺的重要基地，也是研究中国古建筑的核心办公地点。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">1955年 - 1972年</span>
+                            <h3>最后的居所</h3>
+                            <p>梁思成一家搬回北总布胡同24号居住。这是梁思成在抗战胜利后，与林徽因共同参与国都规划、首都建设及清华大学建筑系建设期间的住所。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2017年</span>
+                            <h3>故居修缮开放</h3>
+                            <p>经过修缮，北总布胡同24号“梁思成林徽因故居”正式对外开放。这里保留了传统的四合院格局，复原了当年的生活与工作场景。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 50px;">
+                    <h3 style="margin-bottom: 20px; text-align: center;">故居风貌</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/seed/house_1/400/300.jpg" alt="故居正门">
+                            <div class="gallery-caption">故居正门</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/seed/house_2/400/300.jpg" alt="庭院景观">
+                            <div class="gallery-caption">庭院景观</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/seed/house_3/400/300.jpg" alt="书房复原">
+                            <div class="gallery-caption">书房复原</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/seed/house_4/400/300.jpg" alt="建筑构件">
+                            <div class="gallery-caption">传统建筑构件</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visit Guide Section -->
+        <section id="visit" class="section visit-info">
+            <div class="container">
+                <div class="section-header">
+                    <h2>参观指南</h2>
+                    <p>走进历史，感受建筑大师的生活气息。</p>
+                </div>
+                
+                <div class="info-container">
+                    <div class="info-column">
+                        <h3>基本信息</h3>
+                        <ul class="info-list">
+                            <li><strong>地址：</strong>北京市东城区北总布胡同24号</li>
+                            <li><strong>开放时间：</strong>周二至周日 9:00 - 17:00 (16:00 停止入场) (周一闭馆，法定节假日除外)</li>
+                            <li><strong>门票价格：</strong>免费 (需预约)</li>
+                            <li><strong>建议时长：</strong>1 - 2 小时</li>
+                        </ul>
+                        
+                        <h3 style="margin-top: 30px;">参观提示</h3>
+                        <ul class="info-list">
+                            <li><strong>预约方式：</strong>建议通过官方公众号或相关文化场馆平台进行实名预约。</li>
+                            <li><strong>注意事项：</strong>故居为文物保护单位，请保持安静，禁止触摸展品及文物。</li>
+                            <li><strong>周边联动：</strong>毗邻故宫、王府井步行街，可安排一日文化游。</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-column">
+                        <h3>交通指引</h3>
+                        <ul class="info-list">
+                            <li><strong>地铁：</strong>1号线 天安门东或王府井站</li>
+                            <li><strong>公交：</strong>1路、52路、82路等 至“天安门东”站</li>
+                            <li><strong>自驾：</strong>胡同内车位紧张，建议绿色出行。</li>
+                        </ul>
+                        
+                        <div class="map-placeholder">
+                            <!-- Placeholder for Map -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>延伸阅读</h2>
+                    <p>了解梁思成，阅读相关书籍与资料。</p>
+                </div>
+                <div class="bio-grid">
+                    <article class="bio-card">
+                        <h3>《梁思成全集》</h3>
+                        <p>收录了梁思成先生一生的主要建筑作品、学术论著和书信，是研究中国建筑史最权威的文献资料。</p>
+                    </article>
+                    <article class="bio-card">
+                        <h3>《中国建筑史》</h3>
+                        <p>中国第一部由中国人自己编写、使用现代科学方法编写的建筑通史，填补了中国建筑史学的空白。</p>
+                    </article>
+                    <article class="bio-card">
+                        <h3>《图像中国建筑史》</h3>
+                        <p>梁思成先生手绘的珍贵图纸集，以建筑剖面图的形式清晰展示了从战国到辽金时期的建筑演变。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于故居</h4>
+                    <p>梁思成林徽因故居是了解中国近代建筑史、感受知识分子家国情怀的重要场所。致力于文物保护与历史文化的传承。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#biography">生平简介</a></li>
+                        <li><a href="#heritage">历史沿革</a></li>
+                        <li><a href="#visit">参观指南</a></li>
+                        <li><a href="#">预约系统</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关机构</h4>
+                    <ul>
+                        <li><a href="#">北京市东城区文物管理所</a></li>
+                        <li><a href="#">清华大学建筑学院</a></li>
+                        <li><a href="#">中国营造学社纪念馆</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 梁思成故居介绍页. All Rights Reserved. 本页面仅供文化介绍与参考.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
